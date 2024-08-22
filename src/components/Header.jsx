@@ -1,5 +1,7 @@
 import { brainwave } from "../assets";
 
+import { navigation } from "../constants";
+
 const Header = () => {
   return (
     <div className="fixed top-0 left-0 w-full z-50  border-b border-n-6
@@ -9,8 +11,14 @@ const Header = () => {
           <img src={brainwave} width={190} height={40} alt="Brainwave"/>
         </a>
 
-        <nav>
-          
+        <nav className="hidden fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent">
+          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+            {navigation.map((item) => (
+              <a key={item.id} href={item.url}>
+                {item.title}
+              </a>
+            ))}
+          </div>
         </nav>
       </div>
     </div>
