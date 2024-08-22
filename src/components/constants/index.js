@@ -34,7 +34,7 @@ import {
   telegram,
   twitter,
   yourlogo,
-} from "../../public/assets";
+} from "/home/victor/code/victorfonsecass/brainwave/src/assets";
 
 export const navigation = [
   {
